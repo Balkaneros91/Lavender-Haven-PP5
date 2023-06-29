@@ -14,10 +14,96 @@
 
 {% block content %}
 
-<div class="conatiner">
+<!-- Delivery Banner -->
+<div id="delivery-banner" class="delivery-bg row text-center delivery-banner-mobile">
+    <div class="col">
+        <h4 class="delivery-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+    </div>
+</div>
+
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
-            {{ articles }}
+        <div class="col text-center">
+            <h2 class="logo-font">Items</h2>
+
+
+            <hr class="w-100 mb-1">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="article-container col-10 offset-1">
+
+
+            <div class="row">
+                {% for article in articles %}
+                <div class="col-sm-12 col-lg-4 col-xl-3">
+                    <div class="card h-100">
+                        {% if article.image %}
+                        <a href="#">
+                            <img class="card-img-top img-fluid" src="{{ article.image.url }}" alt="{{ article.name }}">
+                        </a>
+                        {% else %}
+                        <a href="#">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0">{{ article.name }}</p>
+                        </div>
+                        <div class="card-footer pt-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                    {% if article.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted"
+                                            href="{% url 'articles' %}?category={{ article.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ article.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ article.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="#">Edit</a> |
+                                        <a class="text-danger" href="#">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
         </div>
     </div>
 </div>
