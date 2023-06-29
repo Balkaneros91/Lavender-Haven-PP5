@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu100.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu101.gitpod.io', 'localhost']
 
 
 # Application definition
@@ -68,7 +68,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            TEMPLATES_DIR,
             os.path.join(BASE_DIR, 'templates'),
             os.path.join(BASE_DIR, 'templates', 'allauth'),
             ],
@@ -76,7 +75,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
