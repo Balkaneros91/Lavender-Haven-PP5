@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_title %}- Articles{% endblock %}
+
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="conatiner">
+    <div class="row">
+        <div class="col">
+            {{ articles }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
