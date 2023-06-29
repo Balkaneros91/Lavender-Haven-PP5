@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Amethysta&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Amethysta', sans-serif;
+}
+
+body {
+    background-color: lavender;
+}
+
+.cover-image {
+    background: url('/media/lavender-bush.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+    overflow-y: scroll;
+}
+
+.header-container {
+    padding-top: 80px;
+}
+
+/* Navbar */
+
+nav {
+    background-color: #B6A5CB !important;
+}
+
+nav.navbar a {
+    color: black;
+}
+
+.container-fluid.fixed-top {
+    padding: 0;
+}
+
+.dropdown-menu {
+    background-color: lavender;
+}
+
+.input-group-text {
+    background-color: lavender;
+}
+
+.form-control {
+    background-color: lavender;
+}
+
+.navbar-toggler {
+    border: 1px solid black;
+    font-size: 30px;
+}
+
+.text-info {
+    color: #a71e68e6 !important;
+    font-size: 20px;
+}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container-fluid {
+        max-width: 80%;
+    }
+}
+
