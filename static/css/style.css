@@ -62,6 +62,13 @@ nav.navbar a {
 }
 
 
+/* Message - alert */
+
+.alert {
+    margin-top: 100px;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
