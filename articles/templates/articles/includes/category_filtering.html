@@ -1,0 +1,105 @@
+<div class="conatiner-fluid m-5">
+    <div class="row">
+
+        <div class="col d-flex justify-content-center align-items-strech border border-lavender">
+            <div id="filterContainer" class="btn-group" role="group"
+                aria-label="Button group with nested dropdown categories">
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="orderBy" type="button" class="btn dropdown-toggle rounded-0 text-wrap"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Order By
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="orderBy">
+                        <li><a href="{% url 'articles' %}?sort=price&direction=asc" class="dropdown-item">By Price</a></li>
+                        <li><a href="{% url 'articles' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                        </li>
+                        <li><a href="{% url 'articles' %}?sort=category&direction=asc" class="dropdown-item ">By
+                                Category</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}" class="dropdown-item">All Products</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="orderBy" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Essences
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="orderBy">
+                        <li><a href="{% url 'articles' %}?category=candles" class="dropdown-item">Candles</a></li>
+                        <li><a href="{% url 'articles' %}?category=soaps" class="dropdown-item">Soaps</a></li>
+                        <li><a href="{% url 'articles' %}?category=suchets" class="dropdown-item">Suchets</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}?category=candles,soaps,suchets" class="dropdown-item">All
+                                Essences</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="allFood" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Interior Decor
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="allFood">
+                        <li><a href="{% url 'articles' %}?category=textiles" class="dropdown-item">Textiles</a></li>
+                        <li><a href="{% url 'articles' %}?category=decor" class="dropdown-item">Decor</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}?category=textiles,decor" class="dropdown-item">All Interior
+                                Decor</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="allFood" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Accessories
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="allFood">
+                        <li><a href="{% url 'articles' %}?category=jewelry" class="dropdown-item">Jewelry</a></li>
+                        <li><a href="{% url 'articles' %}?category=favors" class="dropdown-item">Favors</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}?category=jewelry,favors" class="dropdown-item">All
+                                Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="allFood" type="button" class="btn dropdown-toggle rounded-0" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Skincare
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="allFood">
+                        <li><a href="{% url 'articles' %}?category=oils" class="dropdown-item">Oils</a></li>
+                        <li><a href="{% url 'articles' %}?category=creams" class="dropdown-item">Creams</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}?category=oils,creams" class="dropdown-item">All Skincare</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown-center text-center px-4" role="group">
+                    <button id="specialOffers" type="button" class="btn dropdown-toggle rounded-0  text-wrap"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Special Offers
+                    </button>
+                    <ul class="dropdown-menu rounded-0 text-center" aria-labelledby="specialOffers">
+                        <li><a href="{% url 'articles' %}?category=deals" class="dropdown-item">Deals</a></li>
+                        <li><a href="{% url 'articles' %}?category=clearance" class="dropdown-item">Clearance</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a href="{% url 'articles' %}?category=deals,clearance" class="dropdown-item">All Specials</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
