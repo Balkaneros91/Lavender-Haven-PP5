@@ -56,7 +56,7 @@ def delete_from_cart(request, item_id):
         article = get_object_or_404(Article, pk=item_id)
         cart = request.session.get('cart', {})
         cart.pop(item_id)
-        messages.error(request, f'Removed {article.name} from your cart')
+        messages.success(request, f'Removed {article.name} from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
