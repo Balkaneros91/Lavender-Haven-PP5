@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'home',
     'articles',
     'cart',
+    'checkout',
 ]
 
 # MESSAGE_TAGS = {
