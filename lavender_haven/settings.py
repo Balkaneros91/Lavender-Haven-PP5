@@ -54,6 +54,9 @@ INSTALLED_APPS = [
     'articles',
     'cart',
     'checkout',
+
+    # Others
+    'crispy_forms',
 ]
 
 # MESSAGE_TAGS = {
@@ -76,6 +79,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lavender_haven.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -91,6 +96,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.contexts.cart_contents',
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },
