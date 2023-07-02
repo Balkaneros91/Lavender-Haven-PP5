@@ -38,6 +38,16 @@
     border: 1px solid #000;
 }
 
+select, 
+select option {
+  color: #000000;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #aab7c4 !important;
+}
+
 /* Overlay checkout */
 #loading-overlay {
   background-color: rgba(195, 152, 223, 0.182);
