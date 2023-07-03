@@ -72,7 +72,18 @@ def article_detail(request, article_id):
 
 def add_article(request):
     """ A view for add article to the webshop """
-    form = ArticleForm()
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES)
+        if form.is_valid():
+            article = form.save()
+            messages.success(request, 'Successfully added article!')
+            return redirect(reverse('article_detail', args=[article.id]))
+        else:
+            messages.error(
+                request, 'Failed to add article. Please ensure the form is valid.')
+    else:
+        form = ArticleForm()
+
     template = 'articles/add_article.html'
 
     context = {
@@ -82,8 +93,29 @@ def add_article(request):
     return render(request, 'articles/add_article.html', context)
 
 
-def edit_article(request):
-    pass
+def edit_article(request, article_id):
+    """ Edit a article """
+    article = get_object_or_404(Article, pk=article_id)
+    if request.method == 'POST':
+        form = ArticleForm(request.POST, request.FILES, instance=article)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Article successfully updated!')
+            return redirect(reverse('article_detail', args=[article.id]))
+        else:
+            messages.error(
+                request, 'Failed to update article. Please ensure the form is valid.')
+    else:
+        form = ArticleForm(instance=article)
+        messages.info(request, f'You are updating {article.name}')
+
+    template = 'articles/edit_article.html'
+    context = {
+        'form': form,
+        'article': article,
+    }
+
+    return render(request, template, context)
 
 
 def delete_article(request):

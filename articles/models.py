@@ -33,7 +33,7 @@ class Article(models.Model):
 
     def generate_random_rating(self):
         # Generate a random rating between 0 and 5
-        return round(random.uniform(0, 5), 2)
+        return round(random.uniform(3, 5), 2)
 
     def save(self, *args, **kwargs):
         if not self.sku:
@@ -49,3 +49,5 @@ class Article(models.Model):
             self.rating = self.generate_random_rating()
 
         super().save(*args, **kwargs)
+
+
