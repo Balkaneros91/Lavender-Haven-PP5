@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Article, Category
+from .forms import ArticleForm
 
 
 def article_list(request):
@@ -67,3 +68,23 @@ def article_detail(request, article_id):
     }
 
     return render(request, 'articles/article_details.html', context)
+
+
+def add_article(request):
+    """ A view for add article to the webshop """
+    form = ArticleForm()
+    template = 'articles/add_article.html'
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'articles/add_article.html', context)
+
+
+def edit_article(request):
+    pass
+
+
+def delete_article(request):
+    pass
