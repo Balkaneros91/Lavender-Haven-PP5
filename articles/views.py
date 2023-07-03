@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Article, Category
 from .forms import ArticleForm
 
@@ -70,8 +72,13 @@ def article_detail(request, article_id):
     return render(request, 'articles/article_details.html', context)
 
 
+@login_required
 def add_article(request):
     """ A view for add article to the webshop """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES)
         if form.is_valid():
@@ -93,8 +100,13 @@ def add_article(request):
     return render(request, 'articles/add_article.html', context)
 
 
+@login_required
 def edit_article(request, article_id):
     """ Edit a article """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     article = get_object_or_404(Article, pk=article_id)
     if request.method == 'POST':
         form = ArticleForm(request.POST, request.FILES, instance=article)
@@ -118,5 +130,22 @@ def edit_article(request, article_id):
     return render(request, template, context)
 
 
-def delete_article(request):
-    pass
+@login_required
+def delete_article(request, article_id):
+    """ Delete a article """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    article = get_object_or_404(Article, pk=article_id)
+
+    if request.method == 'POST':
+        article.delete()
+        messages.success(request, 'Article deleted!')
+        return redirect(reverse('articles'))
+
+    context = {
+        'article': article
+    }
+
+    return render(request, 'articles/delete_article.html', context)
