@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import ContactMessageForm
-from .models import Contact, OpenHours, ContactMessage
+from .forms import ContactMessageForm, UpdateNewsletter
+from .models import Contact, OpenHours, ContactMessage, Newsletter
 
 
 def contacts_view(request):
@@ -47,3 +47,34 @@ def contacts_view(request):
     }
 
     return render(request, 'contacts/contacts.html', context)
+
+
+def newsletter(request):
+    """
+    Allows user to sign up for a newsletter,
+    Checks if the email is already in the database,
+    Aborts process and informs user if so.
+    """
+    try:
+        if request.method == 'POST':
+            email = request.POST['email']
+            redirect_url = request.POST['redirect_url']
+            already_signed_up = Newsletter.objects.values_list(
+                'email', flat=True)
+
+            if email in already_signed_up:
+                messages.error(
+                    request, "This email address is already signed up!")
+            else:
+                form = UpdateNewsletter(request.POST)
+                newsletter = form.save(commit=False)
+                newsletter.email = email
+                newsletter.save()
+                messages.success(
+                    request,
+                    f"{email} has been successfully added to our mailing list")
+            return redirect(redirect_url)
+    except ValueError:
+        messages.error(
+            request, "Please enter valid Email address....")
+        return redirect(redirect_url)

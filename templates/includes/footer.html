@@ -88,7 +88,7 @@
 
                             <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
                                 <!-- Newsletter Signup Column -->
-                                <form method="POST" action="#" class="footer-borders">
+                                <form method="POST" action="{% url 'newsletter' %}" class="footer-borders">
                                     {% csrf_token %}
                                     <div class="form-group mb-2 text-center mt-3">
                                         <h5>Sign up to our Newsletter here...</h5>

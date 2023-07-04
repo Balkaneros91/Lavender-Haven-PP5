@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms
-from .models import ContactMessage
+from .models import ContactMessage, Newsletter
 
 
 class ContactMessageForm(forms.ModelForm):
@@ -20,3 +20,16 @@ class ContactMessageForm(forms.ModelForm):
             'message': forms.TextInput
             (attrs={'placeholder': 'Enter your message'}),
         }
+
+
+class UpdateNewsletter(ModelForm):
+    class Meta:
+        model = Newsletter
+        fields = ['email']
+
+    def __init__(self, *args, **kwargs):
+        super(UpdateNewsletter, self).__init__(*args, **kwargs)
+
+        self.fields['email'].widget.attrs.update(
+            {'class': 'form-control',
+             'placeholder': 'Enter your Email...'})
