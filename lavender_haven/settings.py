@@ -34,6 +34,7 @@ DEBUG = True
 # ALLOWED_HOSTS = ['lavender-haven-pp5.herokuapp.com', 'localhost']
 ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu101.gitpod.io', 'localhost']
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
 
     'django.contrib.sites',
     'allauth',
@@ -57,6 +59,7 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'accounts',
+    'about',
 
     # Others
     'crispy_forms',
@@ -108,9 +111,6 @@ TEMPLATES = [
     },
 ]
 
-# MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage".  # ???
-MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
-
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
@@ -152,16 +152,20 @@ else:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+        'NumericPasswordValidator',
     },
 ]
 
@@ -184,7 +188,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.' \
+                      'StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -216,3 +221,6 @@ DEFAULT_FROM_EMAIL = 'lavender.haven@example.com'
 #     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 #     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
 #     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+# MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage".  # ???
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
