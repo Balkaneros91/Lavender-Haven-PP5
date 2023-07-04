@@ -1,1 +1,1 @@
-web: gunicorn lavender_haven.wsgi
+web: gunicorn lavender_haven.wsgi:application
