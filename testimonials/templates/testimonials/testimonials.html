@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Code block for displaying current site's sub-page -->
+{% block extra_title %}| Testimonials{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+<!-- Code block for displaying Testimonials page -->
+{% block content %}
+<div class="container main-container">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="logo-font">Testimonials</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container bookings">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 p-4">
+
+            {% if reviews %}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Testimonial</th>
+                            <th>Created On</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for testimonial in testimonials %}
+                        <tr>
+                            <td>{{ testimonial.name }}</td>
+                            <td>{{ testimonial.email }}</td>
+                            <td>{{ testimonial.testimonial }}</td>
+                            <td>({{ testimonial.created_on }})</td>
+                            <td>
+                                <a href="#">Edit</a> |
+                                <a class="a-delete" href="#">Delete</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <p>You haven't made any testimonials yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container testimonials">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 p-4">
+
+            {% if testimonials %}
+            <div class="card-deck">
+                {% for testimonial in testimonials %}
+                {% if testimonial.public %}
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ testimonial.name }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ testimonial.email }}</h6>
+                        <p class="card-text">{{ testimonial.testimonial }}</p>
+                        <p class="card-text"><small class="text-muted">Created On: {{ testimonial.created_on }}</small></p>
+
+                        <a href="#" class="card-link">Edit</a>
+                        <a href="#" class="card-link text-danger">Delete</a>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="text-center">You haven't made any testimonials yet.</p>
+            {% endif %}
+
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Add Testimonial</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{%endblock%}
+
+<!-- Back to top button -->
+{% block postloadjs %}
+{{ block.super }}
+
+<script>
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0);
+    })
+</script>
+{%endblock%}
