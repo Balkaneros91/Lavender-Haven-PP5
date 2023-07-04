@@ -3,6 +3,50 @@
         <div class="row">
             <div class="col">
 
+                <!-- Section: Contacts and Newsletter -->
+                <section>
+                    <div class="container-fluid text-center text-md-start mt-5 border-bottom map">
+                        <div class="row">
+
+                            <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+                                <!-- Contacts Column -->
+                                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+
+                                <p><i class="fas fa-home me-3"></i> Hvar Island, Brusje, Croatia</p>
+
+                                <p><i class="fas fa-envelope me-3"></i>lavender.haven@example.com</p>
+
+                                <p><i class="fas fa-phone me-3"></i> + 385 21 892 096</p>
+
+                                <a href="#" class="btn btn-secondary mt-3">Contact Us!</a>
+
+                            </div>
+
+                            <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4">
+                                <!-- Newsletter Signup Column -->
+                                <form method="POST" action="#" class="footer-borders">
+                                    {% csrf_token %}
+                                    <div class="form-group mb-2 text-center mt-3">
+                                        <h5>Sign up to our Newsletter here...</h5>
+                                    </div>
+                                    <div class="form-group container mt-4 mb-4 text-center">
+                                        <label for="email" class="sr-only">Email</label>
+                                        <input type="email" class="form-control w-75 mt-2" name="email" id="email"
+                                            placeholder="Enter your Email...">
+
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        <button type="submit"
+                                            class="btn btn-secondary mt-4 mb-4 metal linear newsletter">Subscribe</button>
+                                        <a class="btn btn-secondary unsubscribe text-decoration-underline"
+                                            href="#">Unsubscribe</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Contacts and Newsletter -->
+
                 <!-- Section: Social media & Copyright -->
                 <section class="d-inline justify-content-center p-4 social-media">
                     <div class="row">
