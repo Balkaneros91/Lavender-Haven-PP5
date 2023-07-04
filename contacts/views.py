@@ -78,3 +78,29 @@ def newsletter(request):
         messages.error(
             request, "Please enter valid Email address....")
         return redirect(redirect_url)
+
+
+def unsubscribe(request):
+    try:
+        subscribed = Newsletter.objects.values_list('email', flat=True)
+
+        if request.method == 'POST':
+            email = request.POST['email']
+            if email in subscribed:
+                to_remove = Newsletter.objects.get(email=email)
+                to_remove.delete()
+                messages.success(
+                    request,
+                    f"{email} has been removed from our mailing list."
+                )
+            else:
+                messages.error(
+                    request,
+                    "Sorry we couldn't find that email on our mailing list.")
+            return redirect('home')
+    except Exception:
+        messages.error(
+            request, 'Whoops, Houston we have a problem!'
+        )
+        return redirect('home')
+    return render(request, 'contacts/unsubscribe.html')
