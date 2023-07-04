@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
 from .models import Testimonials
 from .forms import TestimonialsForm
@@ -35,3 +36,23 @@ def add_testimonial(request):
 
     context = {'form': testimonial_form}
     return render(request, 'testimonials/add_testimonial.html', context)
+
+
+@login_required(login_url='account_login')
+def edit_testimonial(request, pk):
+    testimonial = get_object_or_404(Testimonials, pk=pk)
+
+    # Check if the logged-in user is the owner of the booking
+    if testimonial.email != request.user.email:
+        return HttpResponseForbidden("You don't have permission to access this testimonial.")
+
+    if request.method == 'POST':
+        form = TestimonialsForm(request.POST, instance=testimonial)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Testimonial successfully updated!')
+            return redirect('testimonials')
+    else:
+        form = TestimonialsForm(instance=testimonial)
+    context = {'form': form}
+    return render(request, 'testimonials/edit_testimonial.html', context)

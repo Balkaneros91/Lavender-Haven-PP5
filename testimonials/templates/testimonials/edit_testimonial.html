@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}| Add Testimonial{% endblock %}
+{% block extra_title %}| Edit Testimonial{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -12,28 +12,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="container main-container">
+<div class="container main-container mb-5">
     <div class="row">
-        <div class="col text-center">
-            <h2 class="logo-font">Add Testimonial</h2>
-            <hr class="w-75 mb-3">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <h2 class="logo-font mb-4 text-center">Testimonial Management</h2>
+            <h5 class="text-center">Edit testimonial</h5>
+            <hr>
         </div>
     </div>
 </div>
 
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-            <h2>Add a Testimonial</h2>
+            <h2>Edit Testimonial</h2>
             <form method="POST">
                 {% csrf_token %}
                 {{ form|crispy }}
                 <a class="btn btn-secondary" href="{% url 'testimonials' %}">Close</a>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update Testimonial</button>
             </form>
         </div>
     </div>
 </div>
 
 
-{% endblock content %}
+{% endblock %}

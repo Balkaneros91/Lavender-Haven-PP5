@@ -45,7 +45,7 @@
                             <td>{{ testimonial.testimonial }}</td>
                             <td>({{ testimonial.created_on }})</td>
                             <td>
-                                <a class="text-success" href="#">Edit</a> |
+                                <a class="text-success" href="{% url 'edit_testimonial' pk=testimonial.pk %}">Edit</a> |
                                 <a class="a-delete text-danger" href="#">Delete</a>
                             </td>
                         </tr>
@@ -77,7 +77,7 @@
                         <p class="card-text">{{ testimonial.testimonial }}</p>
                         <p class="card-text"><small class="text-muted">Created On: {{ testimonial.created_on }}</small></p>
 
-                        <a href="#" class="card-link">Edit</a>
+                        <a href="{% url 'edit_testimonial' pk=testimonial.pk %}" class="card-link">Edit</a>
                         <a href="#" class="card-link text-danger">Delete</a>
                     </div>
                 </div>
