@@ -23,7 +23,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <p class="author">Author: {{ blog.author }}</p>
-                            <a href="#" class="post-link">
+                            <a href="{% url 'blog_detail' blog.slug %}" class="post-link">
                                 <h2 class="card-title">{{ blog.title }}</h2>
                                 <p class="card-text">{{ blog.excerpt }}</p>
                             </a>
