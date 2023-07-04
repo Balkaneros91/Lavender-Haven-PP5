@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- About{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 home-about">
+            <div class="text-center">
+                <h2>{{ about_us.restaurant_name }}</h2>
+                <p>{{ about_us.description }}</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container mt-5 about-extra">
+    <div class="row">
+
+        <div class="col-md-6 about">
+            <div class="row">
+                {% for things in things_we_offer|slice:"0:2" %}
+                <div class="col-sm-12 my-3">
+                    <div class="text-center">
+                        <h5>{{ things.title }}</h5>
+                        <p>{{ things.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-6 about">
+            <div class="row">
+                {% for things in things_we_offer|slice:"2:4" %}
+                <div class="col-sm-12 my-3">
+                    <div class="text-center">
+                        <h5>{{ things.title }}</h5>
+                        <p>{{ things.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
