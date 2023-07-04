@@ -22,11 +22,11 @@
     </div>
 </div>
 
-<div class="container bookings">
+<div class="container testimonials">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 p-4">
 
-            {% if reviews %}
+            {% if testimonials %}
             <div class="table-responsive">
                 <table class="table">
                     <thead>
@@ -45,8 +45,8 @@
                             <td>{{ testimonial.testimonial }}</td>
                             <td>({{ testimonial.created_on }})</td>
                             <td>
-                                <a href="#">Edit</a> |
-                                <a class="a-delete" href="#">Delete</a>
+                                <a class="text-success" href="#">Edit</a> |
+                                <a class="a-delete text-danger" href="#">Delete</a>
                             </td>
                         </tr>
                         {% endfor %}
@@ -89,7 +89,7 @@
             {% endif %}
 
             <div class="text-center">
-                <a href="#" class="btn btn-primary">Add Testimonial</a>
+                <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Add Testimonial</a>
             </div>
         </div>
     </div>
