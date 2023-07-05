@@ -14,7 +14,7 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-12 col-lg-6">
             <hr>
@@ -37,8 +37,8 @@
                     {% endif %}
                 {% endfor %}
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'articles' %}">Cancel</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Article</button>
+                    <a class="btn btn-secondary" href="{% url 'articles' %}">Cancel</a>
+                    <button class="btn btn-secondary" type="submit">Update Article</button>
                 </div>
             </form>
         </div>

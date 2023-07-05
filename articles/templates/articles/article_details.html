@@ -18,7 +18,7 @@
         <div class="col">
 
             <!-- Delivery Banner -->
-            <div id="delivery-banner" class="delivery-bg row text-center delivery-banner-mobile">
+            <div id="delivery-banner" class="row text-center delivery-bg">
                 <div class="col">
                     <h4 class="delivery-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
                 </div>
@@ -29,7 +29,7 @@
             <div class="conatiner-fluid">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                        <div class="image-container my-5">
+                        <div class="image-container my-3">
                             {% if article.image and article.image.url %}
                             <a href="{{ article.image.url }}" target="_blank">
                                 <img class="card-img-top img-fluid" src="{{ article.image.url }}"
@@ -76,7 +76,7 @@
                                             <div class="input-group">
 
                                                 <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn btn-black rounded-0"
+                                                    <button class="decrement-qty btn btn-secondary rounded-0"
                                                         data-item_id="{{ article.id }}"
                                                         id="decrement-qty_{{ article.id }}">
                                                         <span class="icon">
@@ -90,7 +90,7 @@
                                                     id="id_qty_{{ article.pk }}">
 
                                                 <div class="input-group-append">
-                                                    <button class="increment-qty btn btn-black rounded-0"
+                                                    <button class="increment-qty btn btn-secondary rounded-0"
                                                         data-item_id="{{ article.id }}"
                                                         id="increment-qty_{{ article.id }}">
                                                         <span class="icon">
@@ -103,14 +103,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="col">
-                                        <a href="{% url 'articles' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                    <div class="col article-buttons">
+                                        <a href="{% url 'articles' %}" class="btn btn-secondary mt-5">
                                             <span class="icon">
                                                 <i class="fas fa-chevron-left"></i>
                                             </span>
                                             <span class="text-uppercase">Keep Shopping</span>
                                         </a>
-                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                                        <input type="submit" class="btn btn-secondary text-uppercase mt-5 custom-button"
                                             value="Add to Bag">
                                     </div>
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">

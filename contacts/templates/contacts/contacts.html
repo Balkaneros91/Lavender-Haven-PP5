@@ -15,10 +15,10 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container mt-5">
     <div class="row">
 
-        <div class="container-fluid contacts">
+        <div class="container contacts">
             <div class="row justify-content-center text-center">
                 <div class="col-sm-5 col-md-5 p-3">
                     <h2 class="pb-2">Contact Details: </h2>
@@ -40,10 +40,10 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row justify-content-center">
         <!-- Contact form -->
-        <div class="col text-center p-4 mt-5" id="contact-form">
+        <div class="col col-md-6 text-center p-4 mt-5" id="contact-form">
             <p class="artist-title border-bottom border-2">Get in Touch</p>
             <form method="POST" action="{% url 'contacts' %}">
                 {% csrf_token %}
@@ -67,7 +67,7 @@
                     <textarea class="form-control" name="message" rows="5" placeholder="Enter your message..."></textarea>
                 </div>
                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                <button type="submit" class="btn metal linear mt-3">Submit</button>
+                <button type="submit" class="btn btn-secondary mt-3">Submit</button>
             </form>
         </div>
     </div>

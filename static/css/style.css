@@ -129,6 +129,10 @@ iframe {
     border: 1px solid rgb(0 0 0);
 }
 
+.card-body h2 {
+    font-size: 2rem;
+}
+
 .card-body a {
     color: black;
 }
@@ -139,7 +143,6 @@ iframe {
 
 .img-fluid {
     max-width: 100%;
-    height: 300px;
 }
 
 .card-body a:hover {
@@ -176,6 +179,14 @@ iframe {
 
 /* Articles */
 
+.category-border {
+    border: 1px solid #aa8bc7 !important;
+}
+
+.category-border button {
+    font-size: 14px;
+}
+
 .btt-button {
     position: fixed;
     bottom: 20px;
@@ -189,6 +200,11 @@ iframe {
 .btt-button.show {
     opacity: 1;
     visibility: visible;
+}
+
+.decrement-qty,
+.increment-qty {
+    font-size: 20px;
 }
 
 
@@ -276,7 +292,8 @@ iframe {
         padding-top: 69px;
     }
 
-    .mobile-view i, p {
+    .mobile-view i,
+    p {
         font-size: 12px;
     }
 
@@ -296,6 +313,19 @@ iframe {
     .btn-group {
         display: block;
     }
+
+    .decrement-qty,
+    .increment-qty {
+        font-size: 10px;
+    }
+
+    .article-buttons span {
+        font-size: 14px;
+    }
+
+    .custom-button {
+        font-size: 15px;
+    }
 }
 
 @media (min-width: 355px) {
@@ -303,7 +333,8 @@ iframe {
         padding-top: 75px;
     }
 
-    .mobile-view i, p {
+    .mobile-view i,
+    p {
         font-size: 14px;
     }
 
@@ -333,13 +364,17 @@ iframe {
     .btn-group {
         display: block;
     }
+
+    .card-body h2 {
+        font-size: 1rem;
+    }
 }
 
 @media (min-width: 576px) {
     .header-container {
         padding-top: 75px;
     }
-    
+
     .navbar-toggler {
         font-size: 25px;
     }
@@ -355,6 +390,11 @@ iframe {
     .header-container {
         padding-top: 77px;
     }
+
+    .delivery-font {
+        font-size: 20px;
+    }
+
 }
 
 /* Slightly larger container on xl screens */
@@ -362,7 +402,6 @@ iframe {
     .container-fluid {
         max-width: 80%;
     }
-
 }
 
 @media (min-width: 1400px) {
