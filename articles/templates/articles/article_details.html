@@ -13,101 +13,116 @@
 
 {% block content %}
 
-<!-- Delivery Banner -->
-<div id="delivery-banner" class="delivery-bg row text-center delivery-banner-mobile">
-    <div class="col">
-        <h4 class="delivery-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
-    </div>
-</div>
-
-{% include 'articles/includes/category_filtering.html' %}
-
-<div class="conatiner-fluid">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
-                {% if article.image and article.image.url %}
-                <a href="{{ article.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ article.image.url }}" alt="{{ article.name }}">
-                </a>
-                {% else %}
-                <a href="#">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ article.name }}">
-                </a>
-                {% endif %}
+        <div class="col">
+
+            <!-- Delivery Banner -->
+            <div id="delivery-banner" class="delivery-bg row text-center delivery-banner-mobile">
+                <div class="col">
+                    <h4 class="delivery-font my-1">Free delivery on orders over €{{ free_delivery_threshold }}!</h4>
+                </div>
             </div>
-        </div>
 
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="article-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ article.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">${{ article.price }}</p>
-                {% if article.category %}
-                <p class="small mt-1 mb-0">
-                    <a class="text-muted" href="{% url 'articles' %}?category={{ article.category.name }}">
-                        <i class="fas fa-tag mr-1"></i>{{ article.category.friendly_name }}
-                    </a>
-                </p>
-                {% endif %}
-                {% if article.rating %}
-                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ article.rating }} / 5</small>
-                {% else %}
-                <small class="text-muted">No Rating</small>
-                {% endif %}
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_article' article.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_article' article.id %}">Delete</a>
-                </small>
-                {% endif %}
-                <p class="mt-3">{{ article.description }}</p>
-                <form class="form" action="{% url 'add_to_cart' article.id %}" method="POST">
-                    {% csrf_token %}
-                    <div class="form-row">
-                        <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
-                            <div class="form-group w-50">
-                                <div class="input-group">
+            {% include 'articles/includes/category_filtering.html' %}
 
-                                    <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
-                                            data-item_id="{{ article.id }}" id="decrement-qty_{{ article.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-minus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
-                                        min="1" max="99" data-item_id="{{ article.pk }}" id="id_qty_{{ article.pk }}">
-
-                                    <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
-                                            data-item_id="{{ article.id }}" id="increment-qty_{{ article.id }}">
-                                            <span class="icon">
-                                                <i class="fas fa-plus"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col">
-                            <a href="{% url 'articles' %}" class="btn btn-outline-black rounded-0 mt-5">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
+            <div class="conatiner-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                        <div class="image-container my-5">
+                            {% if article.image and article.image.url %}
+                            <a href="{{ article.image.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ article.image.url }}"
+                                    alt="{{ article.name }}">
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            {% else %}
+                            <a href="#">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ article.name }}">
+                            </a>
+                            {% endif %}
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
-                </form>
 
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="article-details-container mb-5 mt-md-5">
+                            <p class="mb-0">{{ article.name }}</p>
+                            <p class="lead mb-0 text-left font-weight-bold">${{ article.price }}</p>
+                            {% if article.category %}
+                            <p class="small mt-1 mb-0">
+                                <a class="text-muted" href="{% url 'articles' %}?category={{ article.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ article.category.friendly_name }}
+                                </a>
+                            </p>
+                            {% endif %}
+                            {% if article.rating %}
+                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ article.rating }} / 5</small>
+                            {% else %}
+                            <small class="text-muted">No Rating</small>
+                            {% endif %}
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_article' article.id %}">Edit</a> |
+                                <a class="text-danger" href="{% url 'delete_article' article.id %}">Delete</a>
+                            </small>
+                            {% endif %}
+                            <p class="mt-3">{{ article.description }}</p>
+                            <form class="form" action="{% url 'add_to_cart' article.id %}" method="POST">
+                                {% csrf_token %}
+                                <div class="form-row">
+                                    <div class="col-12">
+                                        <p class="mt-3"><strong>Quantity:</strong></p>
+                                        <div class="form-group w-50">
+                                            <div class="input-group">
+
+                                                <div class="input-group-prepend">
+                                                    <button class="decrement-qty btn btn-black rounded-0"
+                                                        data-item_id="{{ article.id }}"
+                                                        id="decrement-qty_{{ article.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-minus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+
+                                                <input class="form-control qty_input" type="number" name="quantity"
+                                                    value="1" min="1" max="99" data-item_id="{{ article.pk }}"
+                                                    id="id_qty_{{ article.pk }}">
+
+                                                <div class="input-group-append">
+                                                    <button class="increment-qty btn btn-black rounded-0"
+                                                        data-item_id="{{ article.id }}"
+                                                        id="increment-qty_{{ article.id }}">
+                                                        <span class="icon">
+                                                            <i class="fas fa-plus"></i>
+                                                        </span>
+                                                    </button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <a href="{% url 'articles' %}" class="btn btn-outline-black rounded-0 mt-5">
+                                            <span class="icon">
+                                                <i class="fas fa-chevron-left"></i>
+                                            </span>
+                                            <span class="text-uppercase">Keep Shopping</span>
+                                        </a>
+                                        <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5"
+                                            value="Add to Bag">
+                                    </div>
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
         </div>
     </div>
 </div>
