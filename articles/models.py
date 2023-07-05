@@ -49,5 +49,3 @@ class Article(models.Model):
             self.rating = self.generate_random_rating()
 
         super().save(*args, **kwargs)
-
-

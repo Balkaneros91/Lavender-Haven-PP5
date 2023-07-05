@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: lavender;login_required
+    background-color: lavender;
 }
 
 .cover-image {
@@ -17,12 +17,12 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Amethysta', sans-serif;
     overflow-y: scroll;
 }
 
 .header-container {
-    padding-top: 80px;
+    padding-top: 120px;
 }
 
 /* Navbar */
@@ -59,6 +59,61 @@ nav.navbar a {
 .text-info {
     color: #a71e68e6 !important;
     font-size: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #B6A5CB;
+}
+
+.social-media a {
+    color: black;
+}
+
+.footer-links a {
+    color: black;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* Newsletter */
+
+
+
+/* Index */
+
+.logo-font {
+    background: lavender;
+    opacity: 0.8;
+    color: black;
+    font-size: 55px;
+    font-style: italic;
+    line-height: 1.5;
+    border-radius: 40px;
+    padding: 50px;
+}
+
+.shop-now-button {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 1rem 2rem;
+    background: lavender;
+    opacity: 0.8;
+    color: black;
+    border-radius: 20px;
+}
+
+/* Delivery */
+
+.delivery-bg {
+    background: #aa8bc7;
+}
+
+.delivery-font {
+    font-size: 15px;
 }
 
 
@@ -99,10 +154,10 @@ nav.navbar a {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -142,8 +197,6 @@ nav.navbar a {
     border-bottom-color: #343a40 !important;
 }
 
-
-
 .cart-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
@@ -152,11 +205,104 @@ nav.navbar a {
 
 
 /* -------------------------------- Media Queries */
+@media (min-width: 200px) {
+    .header-container {
+        padding-top: 115px;
+    }
+}
+
+@media (min-width: 300px) {
+    .mobile-view {
+        font-size: 15px;
+    }
+
+    .mobile-view a {
+        font-size: 15px;
+    }
+
+    .navbar-toggler {
+        font-size: 20px;
+    }
+
+    .logo-font {
+        font-size: 25px;
+        padding: 40px;
+    }
+
+    .cover-image {
+        height: 55vh;
+    }
+
+    .shop-now-button {
+        font-size: 1rem;
+    }
+
+    .footer-1,
+    .footer-2,
+    .footer-3 {
+        font-size: 15px;
+    }
+
+    .header-container {
+        padding-top: 76px;
+    }
+
+    .btn-group {
+        display: block;
+    }
+}
+
+@media (min-width: 576px) {
+    .header-container {
+        padding-top: 86px;
+    }
+    
+    .mobile-view {
+        font-size: 18px;
+    }
+
+    .mobile-view a {
+        font-size: 18px;
+    }
+
+    .navbar-toggler {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-container {
+        padding-top: 86px;
+    }
+
+    .btn-group {
+        display: contents;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 92px;
+    }
+}
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container-fluid {
         max-width: 80%;
     }
+
+    .header-container {
+        padding-top: 92px;
+    }
 }
 
+@media (min-width: 1400px) {
+    .container-fluid {
+        max-width: 80%;
+    }
+
+    .header-container {
+        padding-top: 92px;
+    }
+}
