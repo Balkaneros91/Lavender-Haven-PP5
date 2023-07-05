@@ -43,8 +43,10 @@ def edit_testimonial(request, pk):
     testimonial = get_object_or_404(Testimonials, pk=pk)
 
     # Check if the logged-in user is the owner of the booking
-    if testimonial.email != request.user.email:
-        return HttpResponseForbidden("You don't have permission to access this testimonial.")
+    if not request.user.is_superuser and testimonial.email != request.user.email:
+        messages.error(request, "You don't have permission to delete this testimonial.")
+        return redirect('testimonials')
+        # return HttpResponseForbidden("You don't have permission to access this testimonial.")
 
     if request.method == 'POST':
         form = TestimonialsForm(request.POST, instance=testimonial)
@@ -56,3 +58,21 @@ def edit_testimonial(request, pk):
         form = TestimonialsForm(instance=testimonial)
     context = {'form': form}
     return render(request, 'testimonials/edit_testimonial.html', context)
+
+
+@login_required
+def delete_testimonial(request, pk):
+    testimonial = get_object_or_404(Testimonials, pk=pk)
+
+    # Check if the logged-in user is a superuser or the owner of the testimonial
+    if not request.user.is_superuser and testimonial.email != request.user.email:
+        messages.error(request, "You don't have permission to delete this testimonial.")
+        return redirect('testimonials')
+        # return HttpResponseForbidden("You don't have permission to delete this testimonial.")
+
+    if request.method == 'POST':
+        testimonial.delete()
+        messages.success(request, 'Testimonial successfully deleted!')
+        return redirect('testimonials')
+    context = {'testimonial': testimonial}
+    return render(request, 'testimonials/delete_testimonial.html', context)

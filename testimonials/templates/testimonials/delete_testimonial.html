@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block extra_title %}| Delete Testimonial{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container main-container mb-5">
+    <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-3">
+            <h2 class="logo-font mb-4 text-center">Testimonial Management</h2>
+            <h5 class="text-center">Delete testimonial</h5>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <h2>Delete Testimonial</h2>
+            <form method="POST">
+                {% csrf_token %}
+                <p>Are you sure you want to delete this testimonial?</p>
+                <a class="btn btn-secondary" href="{% url 'testimonials' %}">Close</a>
+                <button type="submit" class="btn btn-danger">Delete Testimonial</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
