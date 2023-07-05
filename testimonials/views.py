@@ -21,6 +21,15 @@ def testimonials(request):
     return render(request, 'testimonials/testimonials.html', context)
 
 
+def testimonial_detail(request, pk):
+    """ A view to display the testimonial detailed page """
+    testimonial = get_object_or_404(Testimonials, pk=pk)
+
+    context = {'testimonial': testimonial}
+
+    return render(request, 'testimonials/testimonial_detail.html', context)
+
+
 @login_required(login_url='account_login')
 def add_testimonial(request):
     testimonial_form = TestimonialsForm()
