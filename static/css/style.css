@@ -338,6 +338,10 @@ iframe {
     .testimonial-cards a {
         font-size: 12px;
     }
+
+    .text-muted {
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 355px) {
@@ -421,7 +425,7 @@ iframe {
         max-width: 80%;
     }
 
-    
+
 }
 
 @media (min-width: 1400px) {
