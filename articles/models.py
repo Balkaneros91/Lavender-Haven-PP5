@@ -26,7 +26,7 @@ class Article(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)  # noqa
-    image = CloudinaryField('image', default='placeholder.jpg')
+    image = CloudinaryField('image', null=True, blank=True)
 
     def __str__(self):
         return self.name
@@ -41,8 +41,8 @@ class Article(models.Model):
             self.sku = str(uuid.uuid4())
 
         # Save the image URL if it is provided
-        if self.image and not self.image:
-            self.image_url = self.image
+        # if self.image and not self.image:
+        #     self.image_url = self.image
 
         if not self.rating:
             # Generate a random rating if it is not provided

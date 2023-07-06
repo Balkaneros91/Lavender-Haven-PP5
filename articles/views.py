@@ -55,6 +55,7 @@ def article_list(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'no_picture': "https://res.cloudinary.com/dmmljcque/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1688659837/static/image/noimage.78810b3d1526.jpg?_s=public-apps"
     }
 
     return render(request, 'articles/articles.html', context)
@@ -67,6 +68,7 @@ def article_detail(request, article_id):
 
     context = {
         'article': article,
+        'no_picture': "https://res.cloudinary.com/dmmljcque/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1688659837/static/image/noimage.78810b3d1526.jpg?_s=public-apps"
     }
 
     return render(request, 'articles/article_details.html', context)
