@@ -7,16 +7,18 @@
                 <section class="footer-1">
                     <div class="container text-center text-md-start mt-5 border-bottom footer-links">
                         <div class="row mt-3">
-                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
                                 <!-- Content -->
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     <i class="fas fa-gem me-3"></i>Company name
                                 </h6>
-                                <p>Short few words about Us!</p>
+                                <p>Lavander Haven is a Croatian family business centered around lavender cultivation and
+                                    products, embodying tradition and heritage. They provide premium lavender items that
+                                    capture the essence of Croatia's natural allure.</p>
                             </div>
 
-                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                <!-- Links -->
+                            <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                Links
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     Articles
                                 </h6>
@@ -24,15 +26,23 @@
                                     <a href="{% url 'articles' %}" class="text-black">All articles</a>
                                 </p>
                                 <p>
-                                    <a href="{% url 'articles' %}?category=deals,clearance" class="text-black">All Specials</a>
+                                    <a href="{% url 'articles' %}?category=deals,clearance" class="text-black">All
+                                        Specials</a>
                                 </p>
-                            </div>
+                            </div> -->
 
-                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mb-4">
                                 <!-- Links -->
                                 <h6 class="text-uppercase fw-bold mb-4">
                                     Useful links
                                 </h6>
+                                <p>
+                                    <a href="{% url 'articles' %}" class="text-black">All articles</a>
+                                </p>
+                                <p>
+                                    <a href="{% url 'articles' %}?category=deals,clearance" class="text-black">All
+                                        Specials</a>
+                                </p>
                                 <p>
                                     <a href="#!" class="text-black">Privacy policy</a>
                                 </p>
@@ -41,7 +51,7 @@
                                 </p>
                             </div>
 
-                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <div class="col-md-5 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
                                 <!-- Link to map -->
                                 <div id="map-wrapper">
                                     <iframe
@@ -87,8 +97,7 @@
                                             placeholder="Enter your Email...">
 
                                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        <button type="submit"
-                                            class="btn btn-secondary mt-4">Subscribe</button>
+                                        <button type="submit" class="btn btn-secondary mt-4">Subscribe</button>
                                         <a class="btn btn-secondary unsubscribe text-decoration-underline mt-4"
                                             href="{% url 'unsubscribe' %}">Unsubscribe</a>
                                     </div>
