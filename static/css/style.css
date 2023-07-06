@@ -334,6 +334,10 @@ iframe {
     .unsubscribe h2 {
         font-size: 20px;
     }
+
+    .testimonial-cards a {
+        font-size: 12px;
+    }
 }
 
 @media (min-width: 355px) {
@@ -386,12 +390,14 @@ iframe {
     .navbar-toggler {
         font-size: 25px;
     }
+
 }
 
 @media (min-width: 768px) {
     .btn-group {
         display: contents;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -403,6 +409,10 @@ iframe {
         font-size: 20px;
     }
 
+    .testimonial-cards a {
+        font-size: 15px;
+    }
+
 }
 
 /* Slightly larger container on xl screens */
@@ -410,11 +420,17 @@ iframe {
     .container-fluid {
         max-width: 80%;
     }
+
+    
 }
 
 @media (min-width: 1400px) {
     .container-fluid {
         max-width: 80%;
+    }
+
+    .testimonial-cards a {
+        font-size: 18px;
     }
 
 }
