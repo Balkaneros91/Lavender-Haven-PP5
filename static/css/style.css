@@ -105,18 +105,18 @@ iframe {
 /* About */
 
 .home-about {
-    background-color: lavenderblush;
+    background-color: #dfd0f5;
     padding: 30px;
 }
 
 .about-extra {
-    background-color: lavenderblush;
+    background-color: #dfd0f5;
 }
 
 /* Blog */
 
 .card-body {
-    background-color: lavender;
+    background-color: #dfd0f5;
 }
 
 .card {
@@ -157,7 +157,7 @@ iframe {
 /* Contacts */
 
 .contacts {
-    background-color: lavenderblush;
+    background-color: #dfd0f5;
 }
 
 /* Delivery */

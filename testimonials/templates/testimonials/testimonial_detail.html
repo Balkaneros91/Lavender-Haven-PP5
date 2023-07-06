@@ -30,8 +30,8 @@
 
             <a class="btn btn-secondary" href="{% url 'testimonials' %}">Close</a>
             {% if request.user.is_superuser or testimonial.user == request.user %}
-            <a href="{% url 'edit_testimonial' pk=testimonial.pk %}" class="card-link">Edit</a>
-            <a href="{% url 'delete_testimonial' pk=testimonial.pk %}" class="card-link text-danger">Delete</a>
+            <a href="{% url 'edit_testimonial' pk=testimonial.pk %}" class="card-link btn btn-success text-white">Edit</a>
+            <a href="{% url 'delete_testimonial' pk=testimonial.pk %}" class="card-link btn btn-danger text-white">Delete</a>
             {% endif %}
         </div>
     </div>
