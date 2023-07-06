@@ -22,61 +22,21 @@
     </div>
 </div>
 
-<!-- <div class="container testimonials">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10 col-lg-8 p-4">
-
-            {% if testimonials %}
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Testimonial</th>
-                            <th>Created On</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for testimonial in testimonials %}
-                        <tr>
-                            <td>{{ testimonial.name }}</td>
-                            <td>{{ testimonial.email }}</td>
-                            <td>{{ testimonial.testimonial }}</td>
-                            <td>({{ testimonial.created_on }})</td>
-                            <td>
-                                <a class="text-success" href="{% url 'edit_testimonial' pk=testimonial.pk %}">Edit</a> |
-                                <a class="a-delete text-danger" href="{% url 'delete_testimonial' pk=testimonial.pk %}">Delete</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            {% else %}
-            <p>You haven't made any testimonials yet.</p>
-            {% endif %}
-        </div>
-    </div>
-</div> -->
-
-
-
 <div class="container testimonials">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 p-4">
-
+            
             {% if testimonials %}
             <div class="card-deck">
                 {% for testimonial in testimonials %}
                 {% if testimonial.public %}
-                <div class="card mb-4">
+                <div class="card h-100 mb-4">
                     <div class="card-body">
                         <h5 class="card-title">{{ testimonial.name }}</h5>
                         <p class="card-text">{{ testimonial.testimonial }}</p>
                         <p class="card-text"><small class="text-muted">Created On: {{ testimonial.created_on }}</small></p>
 
-                        <a href="{% url 'testimonial_detail' pk=testimonial.pk %}" class="card-link">View</a>
+                        <a class="btn btn-secondary text-white" href="{% url 'testimonial_detail' pk=testimonial.pk %}" class="card-link">View</a>
                         {% if request.user.is_superuser or testimonial.user == request.user %}
                         <a href="{% url 'edit_testimonial' pk=testimonial.pk %}" class="card-link">Edit</a>
                         <a href="{% url 'delete_testimonial' pk=testimonial.pk %}" class="card-link text-danger">Delete</a>
@@ -84,6 +44,28 @@
                     </div>
                 </div>
                 {% endif %}
+
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-4">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-4">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-4">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-4">
+                    <hr>
+                </div>
+                {% endif %}
+
                 {% endfor %}
             </div>
             {% else %}
@@ -91,7 +73,7 @@
             {% endif %}
 
             <div class="text-center">
-                <a href="{% url 'add_testimonial' %}" class="btn btn-primary">Add Testimonial</a>
+                <a href="{% url 'add_testimonial' %}" class="btn btn-secondary">Add Testimonial</a>
             </div>
         </div>
     </div>

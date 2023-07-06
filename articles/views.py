@@ -138,6 +138,7 @@ def delete_article(request, article_id):
         return redirect(reverse('home'))
 
     article = get_object_or_404(Article, pk=article_id)
+    messages.info(request, 'You are now on the article deletion page.')
 
     if request.method == 'POST':
         article.delete()

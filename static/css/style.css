@@ -326,6 +326,14 @@ iframe {
     .custom-button {
         font-size: 15px;
     }
+
+    .card-body h2 {
+        font-size: 1rem;
+    }
+
+    .unsubscribe h2 {
+        font-size: 20px;
+    }
 }
 
 @media (min-width: 355px) {
