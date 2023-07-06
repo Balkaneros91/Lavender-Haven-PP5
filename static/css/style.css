@@ -79,10 +79,6 @@ iframe {
     width: 100%;
 }
 
-/* Newsletter */
-
-
-
 /* Index */
 
 .logo-font {
@@ -106,7 +102,6 @@ iframe {
     border-radius: 20px;
 }
 
-
 /* About */
 
 .home-about {
@@ -115,9 +110,8 @@ iframe {
 }
 
 .about-extra {
-    background-color: lightblue;
+    background-color: lavenderblush;
 }
-
 
 /* Blog */
 
@@ -154,17 +148,17 @@ iframe {
     background-color: lavender;
 }
 
-
 /* Blog detailed */
 
 .btn-like {
     background-color: lavender;
 }
 
-
 /* Contacts */
 
-
+.contacts {
+    background-color: lavenderblush;
+}
 
 /* Delivery */
 
@@ -175,7 +169,6 @@ iframe {
 .delivery-font {
     font-size: 15px;
 }
-
 
 /* Articles */
 
@@ -207,14 +200,9 @@ iframe {
     font-size: 20px;
 }
 
+/* Testimonials */
 
-
-/* Message - alert */
-
-/* .alert {
-    margin-top: 100px;
-} */
-
+/* Messages */
 
 .message-container {
     position: fixed;
@@ -230,9 +218,6 @@ iframe {
 .toast-capper {
     height: 2px;
 }
-
-
-
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
@@ -284,7 +269,6 @@ iframe {
     overflow-x: hidden;
     overflow-y: auto;
 }
-
 
 /* -------------------------------- Media Queries */
 @media (min-width: 200px) {
@@ -394,14 +378,12 @@ iframe {
     .navbar-toggler {
         font-size: 25px;
     }
-
 }
 
 @media (min-width: 768px) {
     .btn-group {
         display: contents;
     }
-
 }
 
 @media (min-width: 992px) {
@@ -424,8 +406,6 @@ iframe {
     .container-fluid {
         max-width: 80%;
     }
-
-
 }
 
 @media (min-width: 1400px) {
@@ -436,5 +416,4 @@ iframe {
     .testimonial-cards a {
         font-size: 18px;
     }
-
 }
