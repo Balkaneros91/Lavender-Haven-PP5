@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEBUG = True
 DEBUG = 'DEVELOPMENT' in os.environ
 
-# ALLOWED_HOSTS = ['lavender-haven-pp5.herokuapp.com', 'localhost']
-ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu101.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['lavender-haven-pp5.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu101.gitpod.io', 'localhost']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
