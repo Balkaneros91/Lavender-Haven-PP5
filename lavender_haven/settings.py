@@ -31,6 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['lavender-haven-pp5-39266b62efea.herokuapp.com', 'localhost']
+# ALLOWED_HOSTS = ['8000-balkaneros9-lavenderhav-eumwvdmuiuo.ws-eu101.gitpod.io', 'localhost']
+
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -66,14 +68,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'storages',
 ]
-
-# MESSAGE_TAGS = {
-#     messages.DEBUG: 'alert-info',
-#     messages.INFO: 'alert-info',
-#     messages.SUCCESS: 'alert-success',
-#     messages.WARNING: 'alert-warning',
-#     messages.ERROR: 'alert-danger',
-# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -113,7 +107,6 @@ TEMPLATES = [
     },
 ]
 
-# MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage".  # ???
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTHENTICATION_BACKENDS = [
@@ -205,13 +198,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 if 'USE_AWS' in os.environ:
     # Cache control

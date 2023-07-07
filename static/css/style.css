@@ -13,7 +13,8 @@ body {
 }
 
 .cover-image {
-    background: url('/static/media/lavender-bush.jpg') no-repeat center center fixed;
+    /* background: url('/static/media/lavender-bush.jpg') no-repeat center center fixed; */
+    background: url('/media/lavender-bush.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -322,6 +323,10 @@ iframe {
         padding: 20px;
     }
 
+    .shop-now-button {
+        font-size: 1rem;
+    }
+
     .btn-group {
         display: block;
     }
@@ -371,12 +376,8 @@ iframe {
     }
 
     .logo-font {
-        font-size: 25px;
+        font-size: 20px;
         padding: 20px;
-    }
-
-    .cover-image {
-        height: 55vh;
     }
 
     .shop-now-button {

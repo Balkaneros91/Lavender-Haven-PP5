@@ -73,3 +73,58 @@ The link to my Github repository's [Github Repo](https://github.com/Balkaneros91
   - [Acknowledgments](#acknowledgments)
 
 <hr>
+
+
+## Design
+
+### Colour Scheme
+
+Since my website is all about lavender and it's culture I wanted my page to reflect the calmness and tranquility of it. The color palett is colorful and playful and I really wanted to achieve the welcoming and relaxing invitation for the user to get their full attention so they can explore all the content Lavender Haven has to offer.
+
+[Coolors.co](https://coolors.co/) was the website I've used to fetch the colour palette presented.
+
+![Colour Palette](readme_img/coolors.png)
+
+### Typography
+
+I have picked Amethysta font because it perfectly suited the content of my website and I have used the same font throughout the whole webcontent.
+
+![Typography](readme_img/google_fonts_family.png)
+![Typography](readme_img/google_fonts_style.png)
+
+
+## Credits
+
+Code Institue projects: 'Boutique Ado', 'I think therefore I blog' and assessment results for my PP4 has helped me a lot during the project planning for my websites design and improvments
+
+Extra help I've used for this project, please see links below.
+
+### Code Used
+
+- [w3schools](https://www.w3schools.com/)
+- [Stack Overflow](https://stackoverflow.com/)
+- [CSS Media Queries](https://www.w3schools.com/css/css3_mediaqueries.asp)
+- [Grid-View](https://www.w3schools.com/css/css_rwd_grid.asp)
+- [emmet.io](https://docs.emmet.io/cheat-sheet/)
+
+- [Start Bootstrap](https://startbootstrap.com/theme/clean-blog)
+- [Django documentation](https://docs.djangoproject.com/en/3.2/)
+
+### Content
+
+- The code is insired by the Boutique Ado walkthrough which is reflecting in my project and for the other parts of my website the content is coded by me based on the inspiration I got after seeing the platform of a small Croatian business.
+
+- For the deployment section I got expired by my colleague here at CI,Adam Gilroy.
+
+### Media
+
+- [Favicon](https://realfavicongenerator.net/) The favicon generator help me create my own favicon. <br>
+  ![Favicon](readme_img/my_favicon.png)
+
+All images are downloaded from internet and used only for purposes of this project.
+
+### Acknowledgments
+
+- I want to thank my mentor Antonio Rodriguez for all the patience, help and support.
+- CI tutor support who help a few times during the process.
+- Kudos to my beautiful and also patiente husband, Nedicto Entenza Gutierrez who help me with a material and descriptions 
