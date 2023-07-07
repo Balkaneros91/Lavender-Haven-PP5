@@ -37,7 +37,7 @@
                             </a>
                             {% else %}
                             <a href="#">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ article.name }}">
+                                <img class="card-img-top img-fluid" src="{% no_image %}" alt="{{ article.name }}">
                             </a>
                             {% endif %}
                         </div>

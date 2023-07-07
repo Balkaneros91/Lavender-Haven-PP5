@@ -55,6 +55,7 @@ def article_list(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'no_image': 'https://lavender-haven-pp5.s3.eu-north-1.amazonaws.com/static/media/noimage.png'
     }
 
     return render(request, 'articles/articles.html', context)
@@ -67,6 +68,7 @@ def article_detail(request, article_id):
 
     context = {
         'article': article,
+        'no_image': 'https://lavender-haven-pp5.s3.eu-north-1.amazonaws.com/static/media/noimage.png'
     }
 
     return render(request, 'articles/article_details.html', context)
