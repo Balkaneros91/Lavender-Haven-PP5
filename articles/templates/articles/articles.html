@@ -99,7 +99,7 @@
                             {% for article in articles %}
                             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                                 <div class="card h-100">
-                                    
+
                                     {% if article.image %}
                                     <a href="{% url 'article_detail' article.id %}">
                                         <img class="card-img-top img-fluid" src="{{ article.image.url }}"
@@ -111,6 +111,20 @@
                                             alt="{{ article.name }}">
                                     </a>
                                     {% endif %}
+
+
+                                    {% if product.image %}
+                                    <a href="{% url 'article_detail' article.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ article.image.url }}"
+                                            alt="{{ article.name }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'article_detail' article.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ article.name }}">
+                                    </a>
+                                    {% endif %}
+
 
                                     <div class="card-body pb-0">
                                         <p class="mb-0">{{ article.name }}</p>

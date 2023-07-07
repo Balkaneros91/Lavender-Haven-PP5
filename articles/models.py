@@ -43,8 +43,8 @@ class Article(models.Model):
             self.sku = str(uuid.uuid4())
 
         # Save the image URL if it is provided
-        # if self.image and not self.image:
-        #     self.image_url = self.image
+        if self.image and not self.image:
+            self.image_url = self.image
 
         if not self.rating:
             # Generate a random rating if it is not provided

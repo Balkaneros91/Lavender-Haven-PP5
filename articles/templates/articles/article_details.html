@@ -40,6 +40,21 @@
                                 <img class="card-img-top img-fluid" src="{{no_picture}}" alt="{{ article.name }}">
                             </a>
                             {% endif %}
+
+
+                            {% if product.image %}
+                            <a href="{{ article.image.url }}" target="_blank">
+                                <img class="img-fluid img-fluid" src="{{ article.image.url }}"
+                                    alt="{{ product.name }}">
+                            </a>
+                            {% else %}
+                            <a href="">
+                                <img class="img-fluid img-thumbnail" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ article.name }}">
+                            </a>
+                            {% endif %}
+
+
                         </div>
                     </div>
 
