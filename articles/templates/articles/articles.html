@@ -107,24 +107,10 @@
                                     </a>
                                     {% else %}
                                     <a href="{% url 'article_detail' article.id %}">
-                                        <img class="card-img-top img-fluid" src="{{no_picture}}"
-                                            alt="{{ article.name }}">
-                                    </a>
-                                    {% endif %}
-
-
-                                    {% if product.image %}
-                                    <a href="{% url 'article_detail' article.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ article.image.url }}"
-                                            alt="{{ article.name }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'article_detail' article.id %}">
                                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                             alt="{{ article.name }}">
                                     </a>
                                     {% endif %}
-
 
                                     <div class="card-body pb-0">
                                         <p class="mb-0">{{ article.name }}</p>
