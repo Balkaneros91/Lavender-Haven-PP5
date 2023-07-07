@@ -107,7 +107,7 @@
                                     </a>
                                     {% else %}
                                     <a href="{% url 'article_detail' article.id %}">
-                                        <img class="card-img-top img-fluid" src="{% no_image %}"
+                                        <img class="card-img-top img-fluid" src="{{ no_image }}"
                                             alt="{{ article.name }}">
                                     </a>
                                     {% endif %}
