@@ -13,7 +13,7 @@ body {
 }
 
 .cover-image {
-    background: url('/media/lavender-bush.jpg') no-repeat center center fixed;
+    background: url('/static/media/lavender-bush.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
