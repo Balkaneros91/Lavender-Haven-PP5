@@ -1,6 +1,6 @@
 from django import forms
 from .widgets import CustomClearableFileInput
-from cloudinary.models import CloudinaryField
+# from cloudinary.models import CloudinaryField
 from .models import Category, Article
 
 
@@ -11,6 +11,7 @@ class ArticleForm(forms.ModelForm):
         fields = '__all__'
 
     # image = CloudinaryField('image', default='placeholder.jpg')
+    image = forms.ImageField(required=False, widget=CustomClearableFileInput)  # noqa
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
