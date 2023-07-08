@@ -228,8 +228,6 @@ iframe {
     border-radius: 0;
 }
 
-/* Testimonials */
-
 /* Messages */
 
 .message-container {
@@ -426,7 +424,6 @@ iframe {
     .testimonial-cards a {
         font-size: 15px;
     }
-
 }
 
 /* Slightly larger container on xl screens */
