@@ -32,11 +32,6 @@ The link to my Github repository's [Github Repo](https://github.com/Balkaneros91
   - [Typography](#typography)
   - [Wireframes](#wireframes)
 
-- [Features](#features)
-
-  - [General Features on Each Page](#general-features-on-each-page)
-  - [Future Implementations](#future-implementations)
-
 - [Technologies Used](#technologies-used)
 
   - [Tools & Technologies Used](#tools--technologies-used)
@@ -78,9 +73,79 @@ The link to my Github repository's [Github Repo](https://github.com/Balkaneros91
 
 <hr>
 
+## User Experience (UX)
 
+Users visiting Lavender Haven website are looking for a new place to explore. We are offering a calming and tranqilazing experiance for our users so they can get as good as possible experience for life.
 
+The front page provides the user with all the necessary content so they could decide if that is the place they want to explore. If not authenticated they can access almost all the content of the page but authentication is required for liking the blog post and leaving testimonials.
 
+Everyone can enjoy their visit to our website because it's adjusted and designed for all different screen sizes.
+
+### Agile
+
+The project is build using the agile methodology. To check the project's board click [here](https://github.com/users/Balkaneros91/projects/16/views/1)
+
+### User Stories
+
+I have created user stories based on the agile methodology and I have created them using the Githubs kanban. In the upcoming images the projects build-up process can be followed up throughout different stages.
+
+### Project stages
+
+### Stage 1
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-1](readme_img/kanban/kanban-1.png)
+
+</details>
+
+### Stage 2
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-2](readme_img/kanban/kanban-2.png)
+
+</details>
+
+### Stage 3
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-3](readme_img/kanban/kanban-3.png)
+
+</details>
+
+### Stage 4
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-4](readme_img/kanban/kanban-4.png)
+
+</details>
+
+### Stage 5
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-5](readme_img/kanban/kanban-5.png)
+
+</details>
+
+### Last stage - done
+
+<details>
+<summary>Click here to see the progress in KanBan:</summary>
+
+![Stage-done](readme_img/kanban/kanban-6.png)
+
+</details>
+
+<hr>
 
 ## Design
 
@@ -291,17 +356,6 @@ I have picked Amethysta font because it perfectly suited the content of my websi
 </details>
 
 <hr>
-
-
-
-
-
-
-
-
-
-
-
 
 ## Technologies Used
 
@@ -633,17 +687,142 @@ You can fork this repository by using the following steps:
 
 <hr>
 
+## Testing
+
+All the links in the navigation bar and in the footer has been tested and works. The logo link always brings the user back to the home page.
+
+The navigation between the apps is very simple and straightforward. The deployed website has been tested in Chrome, Safari, Opera and Firefox. Media queries are tested throughout different screen sizes.
+
+### Responsiveness
+
+- [Am I Responsive?](http://ami.responsivedesign.is/#)
+
+### Manual Testing
+
+<ul>
+<li>Article and testimonials data model tested and the whole circle of the CRUD functionality works for both users and the admin.</li>
+<li>Accept or reject testimonials by admin in the admin panel tested. And the testimonials gets displayed on the front end once approved.</li>
+<li>Sign-up/ Sign-in/ Sign-out links all tested and works.</li>
+<li>Order confirmation emails, password reset all works.</li>
+<li>Authorisation tested based on the different accesses so that role-based functions such as super-user access or just authenticated users.</li>
+</ul>
+
+<hr>
+
+### Browser Compatibility:
+
+| Browser       | Pass/Fail |
+| ------------- | --------- |
+| Google Chrome | Pass      |
+| Safari        | Pass      |
+| Opera         | Pass      |
+| Firefox       | Pass      |
+
+<hr>
+
+## Lighthouse
+
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to check the quality of website pages accross mobile and desktop view.
+
+### Lighthouse Mobile Views
+
+<details>
+<summary>Click here to see the lighthouse for mobile views:</summary>
+
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_home.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_about.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_blog.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_blog_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_cotacts.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_unsubscribe.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_articles.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_article_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_article_add_edit.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_article_delete.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_testimonials.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_testimonial_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_testimonial_edit.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_testimonial_delete.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_cart_empty.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_cart.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_checkout.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_checkout_success.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_account_order_history.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_signup.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_signin.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_mobile_signout.png)
 
 
 
+</details>
+
+### Lighthouse Desktop Views
+
+<details>
+<summary>Click here to see the lighthouse for desktop views:</summary>
+
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_home.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_about.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_blog.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_blog_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_contacts.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_unsubscribe.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_articles.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_article_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_article_add_edit.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_article_delete.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_testimonials.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_testimonial_detailed.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_testimonial_edit.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_testimonial_delete.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_cart_empty.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_cart.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_checkout.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_checkout_success.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_account_order_history.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_signup.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_signin.png)
+![Lighthouse](readme_img/lighthouse/lighthouse_desktop_signout.png)
 
 
+</details> <br>
 
+### W3C HTML Validator
 
+- [W3C Markup Validation Serice](https://validator.w3.org/) was used to validate HTML code.
+  ![W3C HTML Validator](readme_img/w3c_markup_validation.png) <br>
 
+### JIGSAW W3C CSS Validator
 
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS code.
+  ![W3C CSS Validator- JIGSAW](readme_img/w3c_css_validator.png) <br>
 
+### JShint
 
+- [JShint Validator](https://jshint.com/) I had few small snippets of JS code implemented in my HTML.
+
+### Code Institute Python Linter
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/) unfortunately I run out of time and could not validate Python code.
+
+### Chrome DevTools
+
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+  played a big role in projects development. I used it for testing, debugging. Further more for exploring around and helping myself to fix HTML and CSS difficulties with it. It help me a lot with setting the responsiveness accross different screen sizes.
+
+### Known bugs
+
+- Bug I noticed just on the end was that if the toast message is displyed on the screen then clicking and opening some other links as accounts and shopping cart does not work until the toast is manually closed.
+
+- Other than that not aware of any other bug.
+
+### Solved Bugs
+
+- In my articles displaying the 'noimage.png' didn't really work and I didnt know how to fix it better than calling the image directly from its url in AWS but this is something I would love to look into in the near future and figure out the way to call the image by templating.
+
+- I had some troubles displaying the incement and decrement options and the quantity input on smaller screens but I figured it out by adding style adjustments to the image.
+
+<hr>
 
 ## Credits
 
