@@ -92,6 +92,217 @@ I have picked Amethysta font because it perfectly suited the content of my websi
 ![Typography](readme_img/google_fonts_family.png)
 ![Typography](readme_img/google_fonts_style.png)
 
+## Wireframes
+
+[Balsamiq](https://balsamiq.com/wireframes) is used for wireframe design.
+
+### Lavender Haven's Home Page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_home.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_home.png)
+
+</details>
+
+### About Page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_about.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_about.png)
+
+</details>
+
+### Blog Page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_blog.png)
+![screenshot](readme_img/wireframes/mobile_blog_detailed.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_blog.png)
+![screenshot](readme_img/wireframes/desktop_blog_detailed.png)
+
+</details>
+
+### Contacts page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_contacts.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_contacts.png)
+
+</details>
+
+### Articles page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_articles.png)
+![screenshot](readme_img/wireframes/mobile_article_detailed.png)
+![screenshot](readme_img/wireframes/mobile_add_edit_article.png)
+![screenshot](readme_img/wireframes/mobile_article_delete.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_articles.png)
+![screenshot](readme_img/wireframes/desktop_article_detailed.png)
+![screenshot](readme_img/wireframes/desktop_add_edit_article.png)
+![screenshot](readme_img/wireframes/desktop_article_delete.png)
+
+</details>
+
+### Testimonials page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_testimonials.png)
+![screenshot](readme_img/wireframes/mobile_testimonial_detailed.png)
+![screenshot](readme_img/wireframes/mobile_testimonial_edit.png)
+![screenshot](readme_img/wireframes/mobile_testimonial_delete.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_testimonials.png)
+![screenshot](readme_img/wireframes/desktop_testimonial_detailed.png)
+![screenshot](readme_img/wireframes/desktop_testimonial_edit.png)
+![screenshot](readme_img/wireframes/desktop_testimonial_delete.png)
+
+</details>
+
+### SignUp, SignIn and SignOut pages
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_signup.png)
+![screenshot](readme_img/wireframes/mobile_signin.png)
+![screenshot](readme_img/wireframes/mobile_signout.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_signup.png)
+![screenshot](readme_img/wireframes/desktop_signin.png)
+![screenshot](readme_img/wireframes/desktop_signout.png)
+
+</details>
+
+### Unsubscribe page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_unsubscribe.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_unsubscribe.png)
+
+</details>
+
+### Shopping cart page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_cart_empty.png)
+![screenshot](readme_img/wireframes/mobile_cart.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_cart_empty.png)
+![screenshot](readme_img/wireframes/desktop_cart.png)
+
+</details>
+
+### Checkout and checkout success pages
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_checkout.png)
+![screenshot](readme_img/wireframes/mobile_checkout_success.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_checkout.png)
+![screenshot](readme_img/wireframes/desktop_checkout_success.png)
+
+</details>
+
+### Account and Order history Page
+
+<details>
+<summary>Click here!</summary>
+
+#### Mobile
+
+![screenshot](readme_img/wireframes/mobile_account_order_history.png)
+
+#### Desktop
+
+![screenshot](readme_img/wireframes/desktop_account_order_history.png)
+
+</details>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Credits
 
